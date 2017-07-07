@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Регистрация</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <form name="registrate" method="GET">
+        <p>
+            <label>Имя</label>
+            <input type="text" size="20">
+        </p>
+        <p>
+            <label>Фамилия</label>
+            <input type="text" size="20">
+        </p>
+        <p>
+            <label>Страна</label>
+            <select name="Country">
+                <option value="russia">Россия</option>
+                <option value="usa">США</option>
+                <option value="thailand">Тайланд</option>
+                <option value="maldives">Мальдивы</option>
+            </select>
+        </p>
+        <p>
+            <label>Подписка на новости</label>
+            <input type="checkbox" name="subscribtion" value="subscribe">
+        </p>
+        <p>
+            <label>Образование:</label> <br>
+            <input type="checkbox" name="beginner" value="beginnner"> Начальное <br>
+            <input type="checkbox" name="school-9" value="school-9"> Школа 9 классов <br>
+            <input type="checkbox" name="school-11" value="school-11"> Школа 11 классов  <br>
+            <input type="checkbox" name="middle" value="middle"> Среднее <br>
+            <input type="checkbox" name="high" value="high"> Высшее <br>
+        </p>
+        <p>
+            <label>О себе:</label> <br>
+            <textarea name="about" cols="20" rows="5"> </textarea>
+        </p>
+        <p>
+            <input type="reset" value="Сбросить">
+            <input type="submit" value="Отправить">
+        </p>
+        </form>        
+    </body>
+</html>
+
