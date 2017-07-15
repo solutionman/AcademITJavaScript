@@ -1,0 +1,11 @@
+.wrong{
+    background-color: red;
+}
+
+.right{
+    background-color: white;
+}
+
+.not-filled{
+    background-color: gainsboro;
+}
