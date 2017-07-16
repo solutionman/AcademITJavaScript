@@ -4,6 +4,7 @@
         <title>Гречневая Каша</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="stylesheet" href="style.css" type="text/css">
+        <script type="text/javascript" scr="script.js"></script>
     </head>
     <body>
         <p>
@@ -27,23 +28,34 @@
         <h1>
             Состав блюда
         </h1>
-        <ol class="different-list">
-            <li>Крупа гречневая</li>
-            <li>вода</li>
-            <li>молоко</li>
-            <li>банан</li>
-            <li>грецкие орехи</li>
-        </ol>
+        <div id="list-to-move">
+            <ol  class="different-list" >
+                <li>Крупа гречневая</li>
+                <li>вода</li>
+                <li>молоко</li>
+                <li>банан</li>
+                <li>грецкие орехи</li>
+            </ol>
+        </div>
+        <script>
+            var divToMove = document.getElementById('list-to-move');
+
+            function moveToRight() {
+                divToMove.setAttribute('list-to-move', 'list-moved');
+            }
+        </script>
         </p>
         <p>
             <img src="pics/buckwheat.jpg" alt="Каша гречневая">
         </p>
-        <div class="fixed-banner">
+        <div class="fixed-banner" onclick="location.href='https://google.com/ncr' ">
             <p>
-                Гречка вагонами 
-                тел. 8-888-888-888
+                Сдвинуть рецепт
             </p>
         </div>
+        <button onclick="moveRecipe()">
+            Сдвинуть рецепт кнопкой
+        </button>
     </body>
 </html>
 
