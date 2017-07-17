@@ -28,7 +28,7 @@
         <h1>
             Состав блюда
         </h1>
-        <div id="list-to-move">
+        <div id="list-to-move" class="different-list">
             <ol  class="different-list" >
                 <li>Крупа гречневая</li>
                 <li>вода</li>
@@ -37,22 +37,25 @@
                 <li>грецкие орехи</li>
             </ol>
         </div>
-        <script>
-            var divToMove = document.getElementById('list-to-move');
-
-            function moveToRight() {
-                divToMove.setAttribute('list-to-move', 'list-moved');
-            }
-        </script>
         </p>
         <p>
             <img src="pics/buckwheat.jpg" alt="Каша гречневая">
         </p>
-        <div class="fixed-banner" onclick="location.href='https://google.com/ncr' ">
+        <div class="fixed-banner" onclick="moveRecipe()">
             <p>
                 Сдвинуть рецепт
             </p>
         </div>
+
+        <script>
+            var div = document.getElementById('list-to-move');
+
+            function moveRecipe() {
+                
+                div.setAttribute('different-list', 'moved-list');
+            }
+        </script>
+
         <button onclick="moveRecipe()">
             Сдвинуть рецепт кнопкой
         </button>
