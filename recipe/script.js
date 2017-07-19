@@ -5,8 +5,9 @@
 
 function moveRecipe() {    
     var someDiv = document.getElementById('list-to-move');
-    someDiv.setAttribute('list-to-move', 'list-moved');
-    alert('You press me )');
+    someDiv.setAttribute('id', 'list-moved');
+    //alert('You press me )');
+    console.log('it works');
 }
 
 

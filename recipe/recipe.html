@@ -28,13 +28,16 @@
         <h1>
             Состав блюда
         </h1>
-        <div id="list-to-move" class="different-list">
-            <ol  class="different-list" >
+        <div id="list-to-move" >
+            <ol class="different-list">
                 <li>Крупа гречневая</li>
                 <li>вода</li>
                 <li>молоко</li>
                 <li>банан</li>
                 <li>грецкие орехи</li>
+                <script>
+                    //document.createElement(li);
+                </script>
             </ol>
         </div>
         </p>
@@ -46,21 +49,6 @@
                 Сдвинуть рецепт
             </p>
         </div>
-<!--
-        <script>
-            var div = document.getElementById('list-to-move');
-
-            function moveRecipe() {
-                
-                div.setAttribute('different-list', 'moved-list');
-            }
-
-            /* alert('Hello, Im working'); */
-        </script>
--->
-        <button onclick="moveRecipe()">
-            Сдвинуть рецепт кнопкой
-        </button>
     </body>
 </html>
 

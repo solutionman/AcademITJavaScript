@@ -1,22 +1,15 @@
-.different-list{
-    list-style: none;
-    font-style: italic;
-    background-color: yellow;
-}
 
 #list-to-move {
-    text-align: center;
+    text-align: left;
 }
 
 #list-moved {
     text-align: right;
 }
 
-.moved-list{
+.different-list{
     list-style: none;
-    /*font-style: italic;*/
-    text-align: right;
-    background-color: blue;
+    font-style: italic;
 }
 
 .fixed-banner{
