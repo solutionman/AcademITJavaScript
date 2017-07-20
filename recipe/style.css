@@ -7,7 +7,7 @@
     text-align: right;
 }
 
-.different-list{
+#different-list{
     list-style: none;
     font-style: italic;
 }
