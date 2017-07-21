@@ -6,13 +6,13 @@
 
 //var recipetList = new Array['Крупа гречневая', 'вода', 'молоко', 'банан', 'грецкие орехи'];
 
-var newLi = document.createElement("li");
+var newLi = document.createElement('li');
 console.log(newLi); 
-newLi.textContent = 'Just for testing';
-var ListFromJS = document.getElementById("different-list");
+var textForInput = document.createTextNode = ('Just for testing');
+var ListFromJS = document.getElementById('different-list');
 //ListFromJS
-ListFromJS.appendChild(newLi);
-newLi.innerHTML = "Some text";
+ListFromJS.appendChild(textForInput);
+newLi.innerHTML = ('Some text');
 
 function moveRecipe() {    
     var someDiv = document.getElementById('list-to-move');
