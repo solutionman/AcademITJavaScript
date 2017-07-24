@@ -9,9 +9,10 @@
 var newLi = document.createElement('li');
 console.log(newLi); 
 var textForInput = document.createTextNode = ('Just for testing');
-var ListFromJS = document.getElementById('different-list');
-//ListFromJS
-ListFromJS.appendChild(textForInput);
+console.log(textForInput);
+var ListFromJS = document.getElementById('different-list');  
+console.log(ListFromJS);
+ListFromJS.appendChild(newLi);
 newLi.innerHTML = ('Some text');
 
 function moveRecipe() {    
