@@ -8,14 +8,11 @@ console.log(tableToCount);
 var rowCount = document.getElementById('tableToCount').getElementsByTagName('tr').length;
 console.log('amount of rows: ' + rowCount);    // correct
 
-var arrayForRows = new Array;
+var arrayForRows = document.getElementById('tableToCount').getElementsByTagName('tr');
+console.log(arrayForRows[0]);
+console.log(arrayForRows[1]);
+console.log(arrayForRows[2]);
 
-for(var i = 0; i < rowCount; ++i){
-    var j = 0;
-    if(i % 2){
-        arrayForRows[j] = document.getElementById('tableToCount').getElementsByTagName('tr')[i];
-        ++j;
-        console.log(arrayForRows[j]);
-    }
-}
+
+
 
