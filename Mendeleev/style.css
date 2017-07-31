@@ -3,3 +3,7 @@
     height: 250px;
     background: url("./pics/mendeleev.png") blue;
 }
+
+.highlight-cell:hover{
+    background-color: red;
+}
