@@ -4,13 +4,12 @@
         <title>Регистрация</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="stylesheet" href="style.css" type="text/css">
-        <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
         <form name="registrate" method="GET">
         <p>
             <label>Имя</label>
-            <input class="wrong" type="text" size="20">
+            <input id="name" class="wrong" type="text" size="20">
         </p>
         <p>
             <label>Фамилия</label>
@@ -46,6 +45,8 @@
             <input type="submit" value="Отправить">
         </p>
         </form>     
+    <button type="button" class="ready" onclick="checkcollect()" value="Ready" >
     </body>
 </html>
+<script type="text/javascript" src="script.js"></script>
 

@@ -1,3 +1,11 @@
+.ready{
+    font: Arial;
+    text-align: center;
+    background: greenyellow;
+    height: 30px;
+    width: 100px;
+}
+
 .wrong{
     background-color: red;
 }
