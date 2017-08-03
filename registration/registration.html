@@ -9,7 +9,7 @@
         <form name="registrate" method="GET">
         <p>
             <label>Имя</label>
-            <input id="name" class="wrong" type="text" size="20">
+            <input id="name" class="right" type="text" size="20">
         </p>
         <p>
             <label>Фамилия</label>
@@ -45,7 +45,11 @@
             <input type="submit" value="Отправить">
         </p>
         </form>     
-    <button type="button" class="ready" onclick="checkcollect()" value="Ready" >
+    <label id="messageForUser"> Нажмите зеленую кнопку проверки </label>
+    <br/>
+    <button type="button" class="ready" onclick="checkcollect()" value="Проверка" >
+        Проверка
+    </button>
     </body>
 </html>
 <script type="text/javascript" src="script.js"></script>

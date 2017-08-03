@@ -3,8 +3,10 @@
 
 
 function checkcollect(){
-    var name = document.getElementById('name').value;
-    var surname = document.getElementById('surname').value;
+    var name = '';
+    name = document.getElementById('name').value;
+    var surname = '';
+    surname = document.getElementById('surname').value;
     var country = document.getElementById('country').value;
     var subscribe = document.getElementById('subscribe').checked;
     var educationbeginner = document.getElementById('educationbeginner').checked;
@@ -25,7 +27,29 @@ function checkcollect(){
     console.log(schoolhigh);
     console.log(about);
     //console.log('button works');
-}
 
+    var message = document.getElementById('messageForUser');
+    var nameElement = document.getElementById('name');
+
+    if(name == ''){
+        //alert('Поле "Имя" не заполнено');        
+        nameElement.setAttribute('class', 'wrong');
+        //console.log(nameElement);        
+        console.log(message);
+        message.innerText = 'Не все поля заполнены';
+    } else if(name != ''){
+        nameElement.setAttribute('class', 'right');
+    }
+
+    var surnameElement = document.getElementById('surname');
+    if(surname == ''){        
+        surnameElement.setAttribute('class', 'wrong');
+        //alert('Поле "Фамилия" не заполнено');
+        message.innerText = 'Не все поля заполнены';
+    } else if(surname != ''){
+        surnameElement.setAttribute('class', 'right');
+    }
+
+}
 
 
