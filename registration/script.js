@@ -1,7 +1,6 @@
 
 //console.log('script works');
 
-
 function checkcollect(){
     var name = '';
     name = document.getElementById('name').value;
@@ -15,18 +14,8 @@ function checkcollect(){
     var schoolmiddle = document.getElementById('schoolmiddle').checked;
     var schoolhigh = document.getElementById('schoolhigh').checked;
     var about = document.getElementById('about').value;
+    var submitButton = document.getElementById('submitButton');
 
-    console.log(name);
-    console.log(surname);
-    console.log(country);
-    console.log(subscribe);
-    console.log(educationbeginner);
-    console.log(school9);
-    console.log(school11);
-    console.log(schoolmiddle);
-    console.log(schoolhigh);
-    console.log(about);
-    //console.log('button works');
 
     var message = document.getElementById('messageForUser');
     var nameElement = document.getElementById('name');
@@ -37,6 +26,7 @@ function checkcollect(){
         //console.log(nameElement);        
         console.log(message);
         message.innerText = 'Не все поля заполнены';
+        submitButton.disabled = true;
     } else if(name != ''){
         nameElement.setAttribute('class', 'right');
     }
@@ -46,10 +36,41 @@ function checkcollect(){
         surnameElement.setAttribute('class', 'wrong');
         //alert('Поле "Фамилия" не заполнено');
         message.innerText = 'Не все поля заполнены';
+        submitButton.disabled = true;
     } else if(surname != ''){
         surnameElement.setAttribute('class', 'right');
     }
 
+    if(name != '' && surname !=''){
+        message.innerText = 'Все обязательные поля заполнены, можете отправлять запрос';
+        submitButton.disabled = false;
+    }
 }
 
+function sendData(){
+    var name = document.getElementById('name').value;
+    var surname = document.getElementById('surname').value;
+    var country = document.getElementById('country').value;
+    var subscribe = document.getElementById('subscribe').checked;
+    var educationbeginner = document.getElementById('educationbeginner').checked;
+    var school9 = document.getElementById('school9').checked;
+    var school11 = document.getElementById('school11').checked;
+    var schoolmiddle = document.getElementById('schoolmiddle').checked;
+    var schoolhigh = document.getElementById('schoolhigh').checked;
+    var about = document.getElementById('about').value;
+    var submitButton = document.getElementById('submitButton');
 
+    var data = [name, surname, country, subscribe, educationbeginner, school9, school11, schoolmiddle, schoolhigh, about];
+
+
+    //console.log(data.length);
+    
+    for(var i = 0; data.length; ++i){       
+        
+        if(data[i]){
+            console.log(data[i].toString());
+        }        
+        
+    }
+    
+}
