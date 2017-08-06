@@ -48,6 +48,8 @@ function checkcollect(){
 }
 
 function sendData(){
+    console.log('Send data works');
+
     var name = document.getElementById('name').value;
     var surname = document.getElementById('surname').value;
     var country = document.getElementById('country').value;
@@ -60,11 +62,28 @@ function sendData(){
     var about = document.getElementById('about').value;
     var submitButton = document.getElementById('submitButton');
 
-    var data = [name, surname, country, subscribe, educationbeginner, school9, school11, schoolmiddle, schoolhigh, about];
+    
+    var data = {
+        dataName: name, 
+        dataSurname: surname,
+        dataCountry: country,
+        dataSubscribe: subscribe,
+        dataEducationbeginner: educationbeginner,
+        dataSchool9: school9,
+        dataSchool11: school11,
+        dataSchoolmiddle: schoolmiddle,
+        dataSchoolhigh: schoolhigh,
+        dataAbout: about
+    };
+    
 
+    console.log(data.toString());
 
     //console.log(data.length);
-    
+
+    console.log('Send data works');
+
+    /*
     for(var i = 0; data.length; ++i){       
         
         if(data[i]){
@@ -72,5 +91,5 @@ function sendData(){
         }        
         
     }
-    
+    */
 }

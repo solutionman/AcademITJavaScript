@@ -1,0 +1,25 @@
+
+#list-to-move {
+    text-align: left;
+}
+
+#list-moved {
+    text-align: right;
+}
+
+#different-list{
+    list-style: none;
+    font-style: italic;
+}
+
+.fixed-banner{
+    float: right;
+    background: brown;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 5px solid greenyellow;
+}
