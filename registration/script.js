@@ -1,5 +1,5 @@
 
-//console.log('script works');
+console.log('script works');
 
 function checkcollect(){
     var name = '';
@@ -61,7 +61,6 @@ function sendData(){
     var schoolhigh = document.getElementById('schoolhigh').checked;
     var about = document.getElementById('about').value;
     var submitButton = document.getElementById('submitButton');
-
     
     var data = {
         dataName: name, 
@@ -74,14 +73,14 @@ function sendData(){
         dataSchoolmiddle: schoolmiddle,
         dataSchoolhigh: schoolhigh,
         dataAbout: about
-    };
+    }
     
-
-    console.log(data.toString());
+    console.log(JSON.stringify(data)); // works ))
 
     //console.log(data.length);
 
-    console.log('Send data works');
+    //console.log(name);
+    //console.log('Send data works');
 
     /*
     for(var i = 0; data.length; ++i){       
