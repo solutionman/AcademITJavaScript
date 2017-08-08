@@ -42,10 +42,26 @@ We suggest that you begin by typing:
 ***************************************************
 
 
+npm run build    // build project for production
+
+npm install react-bootstrap --save
+
+npm install bootstrap --save
 
 
+in index.js
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 
+in App.js
 
+import {Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap';
+
+then some tags like:
+
+<Navbar.Brand>
+  <a href="#">React-Bootstrap</a>
+</Navbar.Brand>
 
 
 
