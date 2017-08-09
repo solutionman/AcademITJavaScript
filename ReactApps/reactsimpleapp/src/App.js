@@ -33,9 +33,32 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <p className="App-intro">
+          Введите число от 1 до 9.
+        </p>
+        <div>
+          <button type="button" onClick={this.minusButton}> - </button>
+          <input className="App-input" id="forNumber"></input>
+          <button type="button" onClick={this.plisButton}> + </button>
+        </div>
       </div>
+      
     );
+
   }
+
+    minusButton(){
+      var inputNumber = document.getElementById('forNumber').value;
+      console.log(' - clicked');
+      --inputNumber;
+      console.log(inputNumber);
+    };
+    plisButton(){
+      var inputNumber = document.getElementById('forNumber').value;
+      console.log(' + clicked');
+      ++inputNumber;
+      console.log(inputNumber);
+    }
 }
 
 export default App;
