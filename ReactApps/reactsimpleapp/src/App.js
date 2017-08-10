@@ -38,26 +38,54 @@ class App extends Component {
         </p>
         <div>
           <button type="button" onClick={this.minusButton}> - </button>
-          <input className="App-input" id="forNumber"></input>
-          <button type="button" onClick={this.plisButton}> + </button>
+          <input className="App-input" id="forNumber" onInput={this.checkNumber}></input>
+          <button type="button" onClick={this.plusButton}> + </button>
         </div>
+        <p id="messageForUser">
+        </p>
       </div>
       
     );
 
   }
 
+    //document.getElementById('forNumber').addEventListener();
+    checkNumber(){
+      var checkedNumber = document.getElementById('forNumber').value;
+      console.log(checkedNumber);
+
+      var messageForUser = document.getElementById('messageForUser');
+
+      if(checkedNumber > 1 && checkedNumber < 9){     
+      messageForUser.innerText = '';
+      } else {
+        console.log('wrong symbol');        
+        messageForUser.innerText = 'вы должны ввести число от 1 до 9';
+        //document.getElementById('forNumber').value = 5;
+      }
+    }
+
     minusButton(){
       var inputNumber = document.getElementById('forNumber').value;
-      console.log(' - clicked');
-      --inputNumber;
-      console.log(inputNumber);
+      //console.log(' - clicked');
+      if(inputNumber <= 1){
+        inputNumber = 1;
+      } else {
+        --inputNumber;
+      }
+      //console.log(inputNumber);
+      document.getElementById('forNumber').value = inputNumber;
     };
-    plisButton(){
+    plusButton(){
       var inputNumber = document.getElementById('forNumber').value;
-      console.log(' + clicked');
-      ++inputNumber;
-      console.log(inputNumber);
+      //console.log(' + clicked');
+      if(inputNumber >= 9){
+        inputNumber = 9;
+      } else {
+        ++inputNumber;
+      }
+      //console.log(inputNumber);
+      document.getElementById('forNumber').value = inputNumber;
     }
 }
 
