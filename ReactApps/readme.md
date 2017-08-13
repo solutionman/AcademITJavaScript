@@ -44,9 +44,14 @@ We suggest that you begin by typing:
 
 npm run build    // build project for production
 
+su
+npm install -g pushstate-server   // running in server
+
 npm install react-bootstrap --save
 
 npm install bootstrap --save
+
+npm install react-scripts    // without them can't start my projects
 
 
 in index.js
