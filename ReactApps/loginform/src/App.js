@@ -3,6 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      customVal: ''
+    };
+  }
   render() {
     return (
       <div className="App">
@@ -15,10 +21,10 @@ class App extends Component {
         </p>
         <div id="authorization">
           <p>
-            <input id="inputForLoggin" inInput={this.checkInput()}></input>
+            <input id="inputForLoggin" value={this.state.customVal} onChange={ (e) => this.checkInput(e)}></input>
           </p>
           <p>
-            <button id="loginButton" onClick={this.checkAuthorization()}>Войти</button>
+            <button id="loginButton" onClick={(e) => this.checkAuthorization(e)}>Войти</button>
           </p>
         </div>
       </div>
@@ -26,11 +32,20 @@ class App extends Component {
 
   }
 
-    checkInput(){
-      //var lettersFromInput = document.getElementById('inputForLoggin').value;
+    checkInput(e){
+      const val = e.target.value;
+      this.setState({customVal: val});
     }
 
-    checkAuthorization(){
+    checkAuthorization(e){
+      const val = this.state.customVal;
+      if(val != null){
+        console.log(val);
+        var divForRemoving = document.getElementById('authorization');
+        console.log(divForRemoving);
+        //document.removeChild.getElementById('authorization');
+        //document.getElementById('authorization').remove;
+      }
       //var lettersFromInput = document.getElementById('inputForLoggin').value;
       //console.log(textFromInput);
     }
