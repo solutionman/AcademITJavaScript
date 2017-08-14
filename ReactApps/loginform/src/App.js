@@ -19,7 +19,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <div id="authorization">
+        <div id="authorization" className="App-visible">
           <p>
             <input id="inputForLoggin" value={this.state.customVal} onChange={ (e) => this.checkInput(e)}></input>
           </p>
@@ -43,12 +43,10 @@ class App extends Component {
         console.log(val);
         var divForRemoving = document.getElementById('authorization');
         console.log(divForRemoving);
-        //document.removeChild.getElementById('authorization');
-        //document.getElementById('authorization').remove;
+        divForRemoving.setAttribute('class', 'App-invisible');
       }
-      //var lettersFromInput = document.getElementById('inputForLoggin').value;
-      //console.log(textFromInput);
     }
 }
 
 export default App;
+
