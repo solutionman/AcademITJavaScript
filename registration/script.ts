@@ -1,5 +1,7 @@
+
 console.log('script works');
-function checkcollect() {
+
+function checkcollect(){
     var name = '';
     name = document.getElementById('name').value;
     var surname = '';
@@ -13,36 +15,41 @@ function checkcollect() {
     var schoolhigh = document.getElementById('schoolhigh').checked;
     var about = document.getElementById('about').value;
     var submitButton = document.getElementById('submitButton');
+
+
     var message = document.getElementById('messageForUser');
     var nameElement = document.getElementById('name');
-    if (name == '') {
+
+    if(name == ''){
         //alert('Поле "Имя" не заполнено');        
         nameElement.setAttribute('class', 'wrong');
         //console.log(nameElement);        
         console.log(message);
         message.innerText = 'Не все поля заполнены';
         submitButton.disabled = true;
-    }
-    else if (name != '') {
+    } else if(name != ''){
         nameElement.setAttribute('class', 'right');
     }
+
     var surnameElement = document.getElementById('surname');
-    if (surname == '') {
+    if(surname == ''){        
         surnameElement.setAttribute('class', 'wrong');
         //alert('Поле "Фамилия" не заполнено');
         message.innerText = 'Не все поля заполнены';
         submitButton.disabled = true;
-    }
-    else if (surname != '') {
+    } else if(surname != ''){
         surnameElement.setAttribute('class', 'right');
     }
-    if (name != '' && surname != '') {
+
+    if(name != '' && surname !=''){
         message.innerText = 'Все обязательные поля заполнены, можете отправлять запрос';
         submitButton.disabled = false;
     }
 }
-function sendData() {
+
+function sendData(){
     console.log('Send data works');
+
     var name = document.getElementById('name').value;
     var surname = document.getElementById('surname').value;
     var country = document.getElementById('country').value;
@@ -54,8 +61,9 @@ function sendData() {
     var schoolhigh = document.getElementById('schoolhigh').checked;
     var about = document.getElementById('about').value;
     var submitButton = document.getElementById('submitButton');
+    
     var data = {
-        dataName: name,
+        dataName: name, 
         dataSurname: surname,
         dataCountry: country,
         dataSubscribe: subscribe,
@@ -65,17 +73,21 @@ function sendData() {
         dataSchoolmiddle: schoolmiddle,
         dataSchoolhigh: schoolhigh,
         dataAbout: about
-    };
+    }
+    
     console.log(JSON.stringify(data)); // works ))
+
     //console.log(data.length);
+
     //console.log(name);
     //console.log('Send data works');
+
     /*
-    for(var i = 0; data.length; ++i){
+    for(var i = 0; data.length; ++i){       
         
         if(data[i]){
             console.log(data[i].toString());
-        }
+        }        
         
     }
     */
