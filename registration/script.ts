@@ -81,7 +81,6 @@ function sendData(){
 
     //console.log(name);
     //console.log('Send data works');
-    // some code here
 
     /*
     for(var i = 0; data.length; ++i){       
@@ -93,4 +92,5 @@ function sendData(){
     }
     
     */
+    // and now some code here
 }
