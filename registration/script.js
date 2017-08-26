@@ -80,5 +80,9 @@ function sendData() {
     }
     
     */
+<<<<<<< HEAD
     // and now some code here
+=======
+    // well, let's test this
+>>>>>>> 977b0b48777bd0c375daa5720b11dbd6e19a305f
 }
